@@ -8,6 +8,9 @@ Tools for configuring AWS ENIs on Ubuntu.
   
 - Modify variables in the script. Setting your gateway IP is very important. You can get that with `route -n`.
 - Run the script with `node interface-gen.js`. Your config files should now be in the cfg/ directory
+- Put ethX.cfg in /etc/network/interfaces.d
+- Append `cfg/eth1-rt_tables.cfg` to `/etc/iproute2/rt_tables`
+- Run `ifup -a`
 
 ## Todo
 Write better instructions. PRs welcome.
